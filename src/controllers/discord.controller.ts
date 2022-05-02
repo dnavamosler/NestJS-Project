@@ -19,10 +19,11 @@ export class DiscordController {
 
     const response = await clientGraphql.request(
       `mutation crearUsuario($object: usuarios_insert_input!) {
-    insert_usuarios_one(object: $object) {
-      id
-    }
-  }
+        insert_usuarios_one(object: $object, on_conflict: {constraint: usuarios_email_key, update_columns: [created_at, user, email]}) {
+          id
+        }
+      }
+
   `,
       {
         object: {
