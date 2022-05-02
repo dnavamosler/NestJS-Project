@@ -6,6 +6,10 @@ export class DiscordController {
   @Post('nuevo-usuario')
   async create(@Body() payload: Respuesta) {
     /* Captura de webhook */
+    console.log(payload);
+    if (!payload.form) {
+      return { ok: true };
+    }
     const {
       form: { questions },
       answer: { answers },
