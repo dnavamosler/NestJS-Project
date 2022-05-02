@@ -1,0 +1,64 @@
+{
+  "form": {
+    "hasEmailNotification": false,
+    "pushNotification": false,
+    "hasWebhookTrigger": true,
+    "_id": "626f17e5b838185b93555619",
+    "title": "Formulario de Inscripción",
+    "questions": [
+      {
+        "email": {
+          "labels": { "confirmation": "Confirmation Email" },
+          "isShowConfirmation": false
+        },
+        "_id": "5e2ec7720185fd7f70acf66f",
+        "isDeleted": false,
+        "isActive": true,
+        "number": { "defaultValue": null },
+        "productbasket": {
+          "viewType": { "viewTypes": [], "defaultViewType": "grid" }
+        },
+        "fileUpload": { "allowedFileTypes": [] },
+        "grid": { "columns": [] },
+        "question": "Email",
+        "isRequired": true,
+        "questionType": "email",
+        "displayOrder": 0
+      },
+      {
+        "_id": "626f184c32b9315de9421b88",
+        "isDeleted": false,
+        "isActive": true,
+        "question": "Usuario",
+        "isRequired": false,
+        "questionType": "text",
+        "displayOrder": 1,
+        "text": { "subType": "shorttext" }
+      }
+    ],
+    "userId": "626f17d96754bb5733bc44ba",
+    "url": "formulario-de-inscripcion"
+  },
+  "answer": {
+    "userId": "626f17d96754bb5733bc44ba",
+    "userInfo": {},
+    "formId": "626f17e5b838185b93555619",
+    "hasHookTrigger": true,
+    "answers": [
+      { "q": "5e2ec7720185fd7f70acf66f", "t": "xjiluz@gmail.com" },
+      { "q": "626f184c32b9315de9421b88", "t": "leanny1" }
+    ],
+    "answerFiles": [],
+    "reduceFromStock": null,
+    "formOwnerEmailConfirmed": true,
+    "formOwnerLang": "en",
+    "formOwnerUsername": "danielnava",
+    "formOwnerCulture": "es-ES",
+    "formOwnerTimezone": "Pacific SA Standard Time",
+    "publicId": "e32aa582",
+    "point": null,
+    "completeSecond": 201,
+    "answerId": "626f1ab0d354dd525881368a",
+    "createDate": "2022-05-01T23:41:36.728Z"
+  }
+}

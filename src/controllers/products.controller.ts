@@ -3,6 +3,8 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
+  HttpStatus,
   Param,
   Post,
   Put,
@@ -21,6 +23,7 @@ export class ProductsController {
   }
   /* Ruta con parametros */
   @Get(':id')
+  @HttpCode(HttpStatus.OK)
   getProduct(@Param('id') id: string) {
     return `Product ${id}`;
   }
