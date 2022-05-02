@@ -7,7 +7,7 @@ export class DiscordController {
   async create(@Body() payload: Respuesta) {
     /* Captura de webhook */
     const {
-      form: { _id, questions },
+      form: { questions },
       answer: { answers },
     } = payload;
 
@@ -26,7 +26,6 @@ export class DiscordController {
   `,
       {
         object: {
-          id: _id,
           email: emailResponse,
           user: discordResponse,
         },
@@ -46,7 +45,6 @@ type Respuesta = {
 };
 
 type Form = {
-  _id: string;
   questions: [Questions];
 };
 
