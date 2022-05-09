@@ -17,14 +17,14 @@ export class DiscordController {
     } = payload;
 
     const emailID = findId('Email', questions);
-    const discordID = findId('Usuario', questions);
+    /*   const discordID = findId('Usuario', questions); */
 
     const emailResponse = findResponse(emailID, answers);
-    const discordResponse = findResponse(discordID, answers);
+    /*   const discordResponse = findResponse(discordID, answers); */
 
     const response = await clientGraphql.request(
       `mutation crearUsuario($object: usuarios_insert_input!) {
-        insert_usuarios_one(object: $object, on_conflict: {constraint: usuarios_email_key, update_columns: [created_at, user, email]}) {
+        insert_usuarios_one(object: $object, on_conflict: {constraint: usuarios_email_key, update_columns: [created_at,  email]}) {
           id
         }
       }
@@ -33,7 +33,7 @@ export class DiscordController {
       {
         object: {
           email: emailResponse,
-          user: discordResponse,
+          /*  user: discordResponse, */
         },
       },
     );
