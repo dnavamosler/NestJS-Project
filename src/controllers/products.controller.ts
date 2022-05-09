@@ -30,6 +30,13 @@ export class ProductsController {
 
     return this.productsService.findAll();
   }
+
+  @Get('test/:id')
+  test() {
+    // return { limit, offset, brand };
+
+    return { ok: true };
+  }
   /* Ruta con parametros */
   @Get(':id')
   @HttpCode(HttpStatus.OK)
