@@ -5,6 +5,15 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "engines": {
+    "node": "14.16.1"
+  },
+  "env": {
+    "NODE_ENV": {
+      "description": "Environment [production/development]",
+      "value": "production"
+    }
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
